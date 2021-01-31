@@ -450,7 +450,8 @@
   }
   .modal-content {
     font-weight: bold;
-    background: linear-gradient(to bottom right,#fe8f00,#b1690c);
+    /* background: linear-gradient(to bottom right,#fe8f00,#b1690c); */
+    background-color: #ea8504;
   }
   .form-control {
     margin: 1em 0;
@@ -466,6 +467,7 @@
     border-bottom: 2px solid #eee;
     padding-left: 0;
     font-weight: normal;
+    color:#fff;
     background: transparent;  
   }
   .form-control::-webkit-input-placeholder {
@@ -549,6 +551,14 @@
   }
   .menu-cat {color:#555555;font-size:11px;font-weight:700;}
   .menu-cat:hover {color:#555555;font-size:11px;font-weight:700;}
+  .form-control:focus {
+    color: #ffffff;
+    background-color: #ea8504;
+    outline: 0;
+    border: none !important;
+    border-bottom: 2px solid #fff !important;
+    /* box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%); */
+}
   </style>
       </style>
       <div class="w3-sidebar w3-bar-block w3-border-left" style="display: none" id="mySidebar">
@@ -626,15 +636,27 @@
     <div class="modal-content">
       <div class="modal-body">
         <button data-dismiss="modal" class="close">&times;</button>
-        <h4>Buy Now</h4>
-        <form>
-			<input type="text" name="name" class="name form-control" placeholder="Name"/>
-			<input type="email" name="email" class="email form-control" placeholder="Email"/>
-			<input type="text" name="subject" class="subject form-control" placeholder="Product Name"/>
-			<textarea id="Message" name="message" class="message form-control" placeholder="Write something.." ></textarea>
-			
-          <input class="btn login" type="submit" value="Submit" />
-        </form>
+        <h4>Buy Now</h4>        
+          <select name="product" id="product" class="name form-control" required>
+            <option value="">Select Product</option>
+            <option value="Oyster Mushroom- Dry">Oyster Mushroom- Dry</option>
+            <option value="Button Mushroom- Fresh">Button Mushroom- Fresh</option>
+            <option value="Cordyceps Militaris">Cordyceps Militaris</option>
+          </select>
+          <input type="number" name="quantity" id="quantity" class="name form-control" placeholder="Quantity" required/>
+          <select name="frequency" id="frequency" class="name form-control" required>
+            <option value="">Frequency</option>
+            <option value="Daily">Daily</option>
+            <option value="Weekly">Weekly</option>
+            <option value="Monthly">Monthly</option>
+          </select>
+      <input type="text" name="location" id="location" class="name form-control" placeholder="Location" required/>
+			<input type="text" name="name" id="name" class="name form-control" placeholder="Name" required/>      
+			<input type="email" name="email" id="email" class="email form-control" placeholder="Email" required/>
+      <input type="text" name="contact" id="contact" class="email form-control" placeholder="Contact" required/>
+			<textarea name="message" id="message" class="message form-control" placeholder="Your Enquiry" ></textarea>
+          <button class="btn login" value="Submit" onclick="sendEnquiry()" >Submit</button>
+
       </div>
     </div>
   </div>  
@@ -868,3 +890,8 @@
           </div>
         </div>
   </footer>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="mail.js"></script>
+</body>
+</html>
