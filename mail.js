@@ -116,11 +116,11 @@ function sendEnquiry() {
         //for Client's mail
         Email.send({
             Host: "smtp.gmail.com",
-            Username: "dabhadesanket97@gmail.com",
-            Password: "Dabhade@97",
+            Username: "ankurmashroom@gmail.com",
+            Password: "Rudra@@9",
             SSL: "Required",
             To: email,
-            From: "dabhadesanket97@gmail.com",
+            From: "ankurmashroom@gmail.com",
             Subject: "Thank You for contacting Ankur Mushrooms!",
             Body: `Hi ${name},<br>Thanks for filling the Enquiry form at ankurmushrooms.in. We will get back to you soon.<br><br><b>Regards,</b><br>Ankur Mushrooms.`
         }).then(
@@ -132,10 +132,10 @@ function sendEnquiry() {
         Email.send({
             Host: "smtp.gmail.com",
             Username: "dabhadesanket97@gmail.com",
-            Password: "Dabhade@97",
+            Password: "Rudra@@9",
             SSL: "Required",
-            To: "dabhadesanket97@gmail.com",
-            From: "dabhadesanket97@gmail.com",
+            To: "ankurmashroom@gmail.com",
+            From: "ankurmashroom@gmail.com",
             Subject: name+" has filled Enquiry form for product "+product+" on ankurmashroom.in",
             Body:
             `${name} has filled the contact us form of ankurmashroom.in.<br>
