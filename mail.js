@@ -26,7 +26,7 @@ function sendMail() {
             To: email,
             From: "contact.ankurmushroom@gmail.com",
             Subject: "Thank You for contacting Ankur Mushrooms!",
-            Body: `Hi ${name},<br>Thanks for filling the contact us form at ankurmushrooms.in. We will get back to you soon.<br><br><b>Regards,</b><br>Ankur Mushrooms.`
+            Body: `Hi ${name},<br>Thanks for filling the contact us form at ankurmushrooms.in.<br>We will get back to you soon.<br><br><b>Regards,</b><br>Ankur Mushrooms.`
         }).then(
             message => console.log(message)
         );
@@ -116,13 +116,13 @@ function sendEnquiry() {
         //for Client's mail
         Email.send({
             Host: "smtp.gmail.com",
-            Username: "ankurmashroom@gmail.com",
-            Password: "Rudra@@9",
+            Username: "contact.ankurmushroom@gmail.com",
+            Password: "Ankur@2021",
             SSL: "Required",
             To: email,
-            From: "ankurmashroom@gmail.com",
+            From: "contact.ankurmushroom@gmail.com",
             Subject: "Thank You for contacting Ankur Mushrooms!",
-            Body: `Hi ${name},<br>Thanks for filling the Enquiry form at ankurmushrooms.in. We will get back to you soon.<br><br><b>Regards,</b><br>Ankur Mushrooms.`
+            Body: `Hi ${name},<br>Thanks for filling the Enquiry form at ankurmushrooms.in.<br>We will get back to you soon.<br><br><b>Regards,</b><br>Ankur Mushrooms.`
         }).then(
             message => console.log(message)
         );
@@ -131,11 +131,11 @@ function sendEnquiry() {
         // for republic's mail
         Email.send({
             Host: "smtp.gmail.com",
-            Username: "dabhadesanket97@gmail.com",
-            Password: "Rudra@@9",
+            Username: "contact.ankurmushroom@gmail.com",
+            Password: "Ankur@2021",
             SSL: "Required",
             To: "ankurmashroom@gmail.com",
-            From: "ankurmashroom@gmail.com",
+            From: "contact.ankurmushroom@gmail.com",
             Subject: name+" has filled Enquiry form for product "+product+" on ankurmashroom.in",
             Body:
             `${name} has filled the contact us form of ankurmashroom.in.<br>
