@@ -20,11 +20,11 @@ function sendMail() {
         //for Client's mail
         Email.send({
             Host: "smtp.gmail.com",
-            Username: "ankurmashroom@gmail.com",
-            Password: "Rudra@@9",
+            Username: "contact.ankurmushroom@gmail.com",
+            Password: "Ankur@2021",
             SSL: "Required",
             To: email,
-            From: "ankurmashroom@gmail.com",
+            From: "contact.ankurmushroom@gmail.com",
             Subject: "Thank You for contacting Ankur Mushrooms!",
             Body: `Hi ${name},<br>Thanks for filling the contact us form at ankurmushrooms.in. We will get back to you soon.<br><br><b>Regards,</b><br>Ankur Mushrooms.`
         }).then(
@@ -35,11 +35,11 @@ function sendMail() {
         // for republic's mail
         Email.send({
             Host: "smtp.gmail.com",
-            Username: "ankurmashroom@gmail.com",
-            Password: "Rudra@@9",
+            Username: "contact.ankurmushroom@gmail.com",
+            Password: "Ankur@2021",
             SSL: "Required",
             To: "ankurmashroom@gmail.com",
-            From: "ankurmashroom@gmail.com",
+            From: "contact.ankurmushroom@gmail.com",
             Subject: name+" has filled Contact us form on ankurmashroom.in",
             Body:
             `${name}(${email}) has filled the contact us form of ankurmashroom.in.<br>Contact :- ${contact}<br>Message :- ${msg}.`
